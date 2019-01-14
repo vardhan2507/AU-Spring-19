@@ -34,8 +34,15 @@ const  data = [
   
 ];
 
-function SimpleTable(props) {
-  const { classes } = props;
+class SimpleTable extends React.Component  {
+  state = {
+    data:[],
+    count:0,
+  };
+ 
+
+  render() {
+    const { classes } = this.props;
 
   return (
     <Paper className={classes.root}>
@@ -67,13 +74,14 @@ function SimpleTable(props) {
           })}
           <TableRow>
           <TableCell colSpan="2" align="center">Grand Total</TableCell>
-          <TableCell></TableCell>
+          <TableCell>{this.state.count}</TableCell>
 
           </TableRow>
         </TableBody>
       </Table>
     </Paper>
   );
+}
 }
 
 SimpleTable.propTypes = {

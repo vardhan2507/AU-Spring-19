@@ -32,7 +32,7 @@ import FormDialog from './FormDialog';
 import ReactDOM from 'react-dom';
 import GoogleLogin from 'react-google-login';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
-
+import Button from '@material-ui/core/Button';
 
 
 
@@ -42,6 +42,9 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     display: 'flex',
+  },
+  button: {
+    margin: theme.spacing.unit,
   },
   
   toolbar: {
@@ -190,6 +193,10 @@ class Dashboard extends React.Component {
             >
              Office Meals
             </Typography>
+            { (this.state.isLoggedIn) &&
+            (<p>Welcome {this.name}   </p>
+    )}
+            <pre>   </pre>
            <div>
           { (!this.state.isLoggedIn)?( <GoogleLogin
     clientId="223402443186-2o5sbj12p2hvvd5jqrhfe385lhorrpkd.apps.googleusercontent.com"
@@ -198,7 +205,6 @@ class Dashboard extends React.Component {
     onFailure={this.responseGoogle}
   />):(
     <div>
-<h2>Welcome {this.name}</h2>
     <GoogleLogout
       buttonText="Logout"
       onLogoutSuccess={this.logout}
@@ -207,12 +213,14 @@ class Dashboard extends React.Component {
     </div>
   )
   
-          }
+}
            
   </div>
-             
+
+         
           </Toolbar>
         </AppBar>
+        { (this.state.isLoggedIn) && (
         <Drawer
           variant="permanent"
           classes={{
@@ -230,6 +238,8 @@ class Dashboard extends React.Component {
           <Divider />
           <List>{secondaryListItems}</List>
         </Drawer>
+        )}
+        { (this.state.isLoggedIn) && (
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
           <Typography variant="h4" gutterBottom component="h2">
@@ -246,10 +256,18 @@ class Dashboard extends React.Component {
       
           <div className={classes.tableContainer}>
             <SimpleTable data={this.state.data}/>
+            <Button variant="contained" color="secondary" className={classes.button}>Submit</Button>
           </div>
         </main>
+
+        
+       
+          )
+        }
       </div>
+        
     );
+    
   }
 }
 

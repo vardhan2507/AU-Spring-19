@@ -21,9 +21,6 @@ const styles = theme => ({
     },
 });
 
-FormDialog.propTypes = {
-  callback : PropTypes.func,
-  }
 
 
 export default class FormDialog extends React.Component {
