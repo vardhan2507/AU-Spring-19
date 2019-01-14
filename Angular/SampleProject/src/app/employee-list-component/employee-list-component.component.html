@@ -1,0 +1,26 @@
+
+<div class="leftD">
+    <ng-container *ngFor="let y of users.result,let i=index" >
+    <p *ngIf="count>i">
+    <button (click)="getEmpDetails(i)">{{y.name}}</button> 
+<br>
+  <p>
+
+    </ng-container>
+
+</div>
+<div class="rightD">
+        <ul *ngFor="let y of users.result,let i=index" >
+        <ng-container *ngIf="empID==i+1">
+    
+    <img height=100 width=150 src="{{y._links.avatar.href}}"><br><br>
+    <b>Name: </b> {{y.name}}<br>
+    <b>Gender: </b> {{y.gender}}<br>
+    <b>DOB: </b> {{y.dob}}<br>
+    <b>Email: </b> {{y.email}}<br>
+    <b>Phone: </b>{{y.phone}}<br>
+    
+        </ng-container>
+    </ul>
+    
+    </div>

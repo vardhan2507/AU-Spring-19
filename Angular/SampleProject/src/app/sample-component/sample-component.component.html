@@ -1,0 +1,50 @@
+<!--
+<div >
+<button (click)="addNums(5,6)">Click Me!</button>
+</div>
+
+<div >
+  <input type="number" [(ngModel)]="a">
+  <input type="number" [(ngModel)]="b">
+Sum={{a+b}}
+</div>
+
+<div>
+Today's Date= {{date|date:'fullDate'}}
+  </div>
+
+  <div>
+      <ul>
+          <li *ngFor="let x of arr">
+            {{ x }}
+          </li>
+        </ul>
+    </div>
+
+
+    <div>
+        <div *ngIf="5==5; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <p>I am true</p>
+        </ng-template>
+        <ng-template #elseBlock>
+            <p>I am false</p>
+        </ng-template>
+    </div>
+
+    <div>
+
+        <span *appSampleDirective=false str="vardhan">
+            {{str}}
+        </span>
+          
+        
+
+      </div>
+    -->
+
+    <br><br>
+    <input [(ngModel)]="empNo" placeholder="Employee Count">
+    <br><br>
+   
+    <app-employee-list-component [count]=empNo></app-employee-list-component>

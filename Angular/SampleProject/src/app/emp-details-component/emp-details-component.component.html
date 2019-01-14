@@ -1,0 +1,16 @@
+
+<div>
+    <ul *ngFor="let y of users.result,let i=index" style="align-content: center">
+    <ng-container *ngIf="tempID==i+1">
+
+<img height=250 width=300 src="{{y._links.avatar.href}}"><br><br>
+<b>Name: </b> {{y.name}}<br>
+<b>Gender: </b> {{y.gender}}<br>
+<b>DOB: </b> {{y.dob}}<br>
+<b>Email: </b> {{y.email}}<br>
+<b>Phone: </b>{{y.phone}}<br>
+
+    </ng-container>
+</ul>
+
+</div>

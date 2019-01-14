@@ -1,0 +1,45 @@
+
+<Employees>
+	<Employee>
+		<Id>1</Id>
+		<Name>Employee</Name>
+		<Salary>100</Salary>
+		<DepartmentId>1</DepartmentId>
+	</Employee>
+	
+	<Employee>
+		<Id>2</Id>
+		<Name>Employee</Name>
+		<Salary>2000</Salary>
+		<DepartmentId>2</DepartmentId>
+	</Employee>
+	
+	<Employee>
+		<Id>3</Id>
+		<Name>Employee-3</Name>
+		<Salary>3000000</Salary>
+		<DepartmentId>1</DepartmentId>
+	</Employee>
+	
+	<Employee>
+		<Id>4</Id>
+		<Name>Employee</Name>
+		<Salary>4000</Salary>
+		<DepartmentId>1</DepartmentId>
+	</Employee>
+	
+	<Employee>
+		<Id>5</Id>
+		<Name>Employee</Name>
+		<Salary>1000</Salary>
+		<DepartmentId>3</DepartmentId>
+	</Employee>
+	
+	<Employee>
+		<Id>6</Id>
+		<Name>Employee</Name>
+		<Salary>1000</Salary>
+		<DepartmentId>4</DepartmentId>
+	</Employee>
+
+</Employees>

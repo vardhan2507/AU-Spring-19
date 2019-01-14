@@ -1,0 +1,35 @@
+div.leftD{
+    color:red;
+    background-color: powderblue;
+    padding:20px;
+    border:2px solid black;
+    border-radius:8px;
+    
+    margin-top:5x;
+    margin: 30px;
+    
+    float:left;
+    
+}
+
+div.rightD{
+  color:red;
+  background-color: powderblue;
+  padding: 20px;
+  border:2px solid black;
+  border-radius:8px;
+  
+
+  
+  margin:30px;   
+  float:right;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
