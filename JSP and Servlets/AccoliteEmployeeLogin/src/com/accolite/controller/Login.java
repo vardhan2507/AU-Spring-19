@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		
-		//loading drivers for oracle
+		
        
     
 	}

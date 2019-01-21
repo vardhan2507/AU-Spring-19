@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 public class Validate {
 	public static boolean checkUser(Connection con,String username,String pass) 
     {
-     boolean st =false;
+     boolean state =false;
      try{
 
 	 
@@ -23,6 +23,6 @@ public class Validate {
      {
          e.printStackTrace();
      }
-        return st;                 
+        return state;                 
  }   
 }
